@@ -1,0 +1,19 @@
+<div class="my-3">
+    <h4>{{todo.title}}</h4>
+    <p>{{todo.shortDescription}}</p>
+    <button class="btn btn-danger" (click)="OnClick(todo)">Delete</button>
+    <button class="btn btn-success mx-1" (click)="OnEdit(todo)">Edit</button>
+    <div [ngClass]="{'strike': !todo.active }" class="my-3">
+        <form (ngSubmit)="OnUpdate()">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="updateBlogTitle" name="title" class="form-control" id="title"
+                    placeholder="New title" required>
+            </div>
+            <div class="form-group">
+                <textarea [(ngModel)]="updateBlogText" name="text" class="form-control" id="textBlog" rows="6" cols="50"
+                    placeholder="New Blog Text Area" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-success my-1">Update</button>
+        </form>
+    </div>
+</div>

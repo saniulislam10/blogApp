@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Blog Title</label>
+      <input type="text" [(ngModel)]="newBlogTitle" name="title" class="form-control" id="title" placeholder="Enter title">
+    </div>
+    <div class="form-group">
+      <label for="textBlog">Blog Text</label>
+      <textarea [(ngModel)]="newBlogText" name="text" class="form-control" id="textBlog" rows="6" cols="50" placeholder="Blog Text Area"></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
