@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from "../../Todo";
+import { Todo } from "../../interfaces/Todo";
 import { GetApiService } from '../../Service/get-api.service'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
